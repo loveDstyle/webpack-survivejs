@@ -6,7 +6,7 @@ const path = require("path");
 const glob = require("glob");
 
 const PATHS = {
-    app: path.join(__dirname, "src"),
+    app: path.join(__dirname, "../src"),
 };
 
 const common = merge([
@@ -21,7 +21,7 @@ const common = merge([
 
 const production = merge([
     parts.extractCSS({
-        use: "css-loader",
+        use: ["css-loader", parts.autoPrefix()],
     }),
     parts.purifyCSS({
         paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true }),
