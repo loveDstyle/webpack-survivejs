@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "serve",
     "start": "cross-env PORT=9999 webpack-dev-server --env.test development --config config/webpack.config.js ",
-    "build": "webpack --env.test production --config config/webpack.config.js"
+    "build": "rimraf ./dist && webpack --env.test production --config config/webpack.config.js"
   },
   "keywords": [],
   "author": "",
