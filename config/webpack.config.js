@@ -38,7 +38,6 @@ const development = merge([
 ]);
 
 module.exports = ({test: mode}) => {
-    console.log(`It's ${mode} mode`);
     if (mode === "production") {
         return merge(common, production, { mode });
     }
