@@ -20,6 +20,7 @@ const common = merge([
 ]);
 
 const production = merge([
+    parts.generateSourceMaps({ type: "source-map" }),
     parts.extractCSS({
         use: ["css-loader", parts.autoPrefix()],
     }),

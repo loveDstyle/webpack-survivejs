@@ -60,3 +60,7 @@ exports.autoPrefix = () => ({
         plugins: () => [require("autoprefixer")()],
     },
 });
+
+exports.generateSourceMaps = ({ type }) => ({
+    devtool: type,
+});
