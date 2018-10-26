@@ -8,7 +8,7 @@ import "react-dom";
 
 
 document.body.appendChild(component());
-console.log(123);
+console.log('test ssh key');
 const element = document.createElement("div");
 element.className = "pu";
 element.innerHTML = '123';
